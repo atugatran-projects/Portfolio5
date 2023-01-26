@@ -9,20 +9,27 @@
     <title>Project 1</title>
 </head>
 
-<body>
+<body data-theme="light">
     <header>
+        <div class="theme-switcher">
+            <input type="checkbox" id="switcher" />
+            <label for="switcher">switch</label>
+        </div>
         <section class="header">
             <aside class="top">
-                <img class="line" src="images/line.svg" alt="line">
+                <!-- <img class="line" src="images/line.svg" alt="line"> -->
+                <section class="line"></section>
                 <section class="icons">
-                    <img class="twitter" src="images/twitter.svg" alt="twitter">
-                    <img class="youtube" src="images/youtube.svg" alt="youtube">
+                    <section class="twitter"></section>
+                    <section class="youtube"></section>
                 </section>
             </aside>
             <aside class="middle">
                 <nav>
                     <ul>
-                        <li> <span class="logo"><img src="images/logo.svg" alt="logo" /></span></li>
+                        <li>
+                            <section class="logo"></section>
+                        </li>
                         <li>Home</li>
                         <li>Download</li>
                         <li>App</li>
@@ -43,8 +50,10 @@
             <aside class="bottom">
                 <img src="images/botom.jpg" alt="bottom">
             </aside>
+            <span class="header-bg"></span>
         </section>
     </header>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
