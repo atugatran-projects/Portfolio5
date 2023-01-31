@@ -74,20 +74,17 @@ header {
     background-size: 90%;
 }
 
-
 nav ul {
     display: flex;
     flex-direction: row;
     align-items: center;
+    cursor: pointer;
     gap: 60px;
     width: 484px;
     height: 43px;
     color: var(--black);
 }
 
-nav ul {
-    cursor: pointer;
-}
 
 .top {
     width: 24px;
@@ -109,8 +106,8 @@ nav ul {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-top: 15px;
-    gap: 30px;
+    padding: 10px 3px;
+    gap: 25px;
     width: 24px;
     height: 78px;
 }
@@ -121,6 +118,7 @@ nav ul {
     background-image: var(--twitter);
     background-size: contain;
     background-repeat: no-repeat;
+    cursor: pointer;
 }
 
 .top .icons .youtube {
@@ -129,6 +127,15 @@ nav ul {
     background-image: var(--youtube);
     background-size: contain;
     background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.top .icons .twitter:hover {
+    background-image: url(../images/C-twitter.svg);
+}
+
+.top .icons .youtube:hover {
+    background-image: url(../images/C-youtube.svg);
 }
 
 .middle {
