@@ -13,14 +13,13 @@ body[data-theme="light"] {
     /* .images */
     --twitter: url(../images/light/twitter.svg);
     --youtube: url(../images/light/youtube.svg);
-    --header-img: none;
-    --header-img2: none;
     /* COLOR */
     --bg-color: #FCF3FF;
     --line: #000;
     --bg-img: none;
     --black: #000;
     --btn-bg: rgba(255, 255, 255, 0.1);
+    --strong: #001647d6;
     --btn-bg-hover: rgba(255, 255, 255, 0.20);
     --toggle-bg: linear-gradient(173.84deg, #7759D2 5.19%, #E2B8F6 88.22%);
 }
@@ -30,10 +29,9 @@ body[data-theme="dark"] {
     --bg-img: url(../images/dark/dark-bg.svg);
     --twitter: url(../images/dark/twitter.svg);
     --youtube: url(../images/dark/youtube.svg);
-    --header-img: url(../images/dark/1.png);
-    --header-img2: url(../images/dark/2.png);
     /* COLOR */
     --bg-color: #0E1129;
+    --strong: #30294b;
     --black: #fff;
     --btn-bg: rgba(255, 255, 255, 0.1);
     --btn-bg-hover: rgba(255, 255, 255, 0.20);
@@ -41,6 +39,11 @@ body[data-theme="dark"] {
     --toggle-bg: linear-gradient(168.49deg, #004FFF 18.61%, #001647 61.64%);
 }
 
+.info {
+    color: var(--strong);
+    font-weight: bolder;
+    font-style: oblique;
+}
 
 /* Header */
 header {
@@ -119,6 +122,7 @@ nav ul {
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer;
+    transition: 0.5s ease-in-out all;
 }
 
 .top .icons .youtube {
@@ -128,6 +132,7 @@ nav ul {
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer;
+    transition: 0.5s ease-in-out all;
 }
 
 .top .icons .twitter:hover {
@@ -143,7 +148,7 @@ nav ul {
     flex-direction: column;
     align-items: flex-start;
     padding: 0 2rem;
-    gap: 40px;
+    gap: 25px;
     width: 566px;
     height: 518px;
 }
@@ -154,7 +159,7 @@ nav ul {
     font-family: 'Spline Sans Mono';
     font-style: normal;
     font-weight: 700;
-    font-size: 70px;
+    font-size: 50px;
     line-height: 83px;
     color: var(--black);
 }
@@ -165,24 +170,28 @@ nav ul {
     font-family: 'Spline Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 20px;
+    font-family: cursive;
     line-height: 150%;
     color: var(--black);
 }
 
 .middle button {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 15px 69px;
-    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 3px;
     width: 224px;
     height: 49px;
+    font-weight: 500;
     background: var(--btn-bg);
     border: 1px solid var(--black);
     color: var(--black);
     backdrop-filter: blur(20px);
     border-radius: 14px;
+    font-size: 15px;
+    font-family: cursive;
+    transition: 0.5s ease-in-out all;
     cursor: pointer;
 }
 
@@ -191,46 +200,40 @@ nav ul {
 }
 
 .bottom {
-    width: 483px;
+    width: 380px;
     padding: 0 2rem;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: end;
+    justify-content: center;
     position: relative;
+    /* overflow: hidden; */
+
+}
+
+.bottom .bottom-outside-con {
+    width: 100%;
+    height: 300px;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    background: var(--btn-bg-hover);
+}
+
+.bottom-inside-con {
+    position: relative;
+    bottom: 39%;
+    left: -10px;
+    width: 110%;
+    height: 140%;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 50%;
+    transform: rotate(-5deg);
+    overflow: hidden;
 }
 
 .bottom img {
-    width: 100%;
-    height: 100%;
-}
-
-.header-img3 {
-    width: 25vw;
-    max-width: 150px;
-    height: 25vh;
-    max-height: 150px;
-    background-image: var(--header-img2);
-    background-size: contain;
-    background-position: left;
-    background-repeat: no-repeat;
-    position: absolute;
-    left: 0px;
-    top: -85px;
-}
-
-.header-img2 {
-    width: 25vw;
-    max-width: 150px;
-    height: 25vh;
-    max-height: 150px;
-    background-image: var(--header-img);
-    background-size: contain;
-    background-position: right;
-    background-repeat: no-repeat;
-    position: absolute;
-    right: 0px;
-    bottom: -85px;
+    width: 125%;
+    position: relative;
+    left: -40px;
+    bottom: -25px;
+    transform: scale(1.3);
 }
 
 /* theme-switcher */
